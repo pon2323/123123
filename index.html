@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>ARZ Active Days</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="crown">👑</div>
+    <h1>Приветствую, уважаемый администратор!</h1>
+    <div class="splash-bar"><span></span></div>
+  </div>
+
+  <main class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">ARZ</div>
+        <div>
+          <b>ACTIVE DAYS</b>
+          <small>Created by Slava_Snake</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-btn active" data-page="main">🏠 <span>Главная</span></button>
+        <button class="nav-btn" data-page="activities">📋 <span>Активности</span></button>
+        <button class="nav-btn" data-page="stats">📊 <span>Статистика</span></button>
+        <button class="nav-btn" data-page="export">📤 <span>Экспорт</span></button>
+        <button class="nav-btn" data-page="settings">⚙ <span>Настройки</span></button>
+        <button class="nav-btn" data-page="about">ℹ <span>О программе</span></button>
+      </nav>
+
+      <div class="side-footer">
+        <b>ARZ ACTIVE DAYS</b>
+        <span>Версия 1.0.0</span>
+        <span>Создатель: Slava_Snake</span>
+        <span>© 2026</span>
+      </div>
+    </aside>
+
+    <section class="content">
+      <header class="topbar">
+        <div>
+          <h1>ARZ ACTIVE DAYS</h1>
+          <p>Подсчёт активности администраторов</p>
+        </div>
+        <a class="dev-badge" href="https://vk.com/bog306" target="_blank" rel="noreferrer">👑 Slava_Snake</a>
+      </header>
+
+      <section class="page active" id="page-main">
+        <div class="panel intro">
+          <h2>Главная</h2>
+          <p>Выбери дату повышения, внеси дни и отыгранное время в формате <b>чч:мм:сс</b>. Активный день считается от норматива.</p>
+          <label class="field">
+            <span>Дата повышения</span>
+            <input id="promotionDate" type="date" />
+          </label>
+        </div>
+
+        <div class="cards">
+          <div class="stat-card green"><span>Активных</span><b id="activeCount">0</b></div>
+          <div class="stat-card red"><span>Неактивных</span><b id="inactiveCount">0</b></div>
+          <div class="stat-card blue"><span>Всего</span><b id="totalCount">0</b></div>
+          <div class="stat-card purple"><span>Процент</span><b id="percentCount">0%</b></div>
+        </div>
+
+        <div class="panel table-panel">
+          <div class="panel-head">
+            <h2>Таблица активности</h2>
+            <div class="actions compact">
+              <button id="addDay">Добавить день</button>
+              <button id="deleteDay" class="danger">Удалить день</button>
+              <button id="clearTable" class="ghost">Очистить</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Дата</th><th>Отыгранное время</th><th>Статус</th></tr></thead>
+              <tbody id="daysBody"></tbody>
+            </table>
+          </div>
+          <button id="calculate" class="primary big">Посчитать активность</button>
+        </div>
+      </section>
+
+      <section class="page" id="page-activities">
+        <div class="panel">
+          <div class="panel-head"><h2>История расчётов</h2><button id="clearHistory" class="ghost">Очистить историю</button></div>
+          <div id="historyList" class="history-list"></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-stats">
+        <div class="cards">
+          <div class="stat-card green"><span>Активных</span><b id="sActive">0</b></div>
+          <div class="stat-card red"><span>Неактивных</span><b id="sInactive">0</b></div>
+          <div class="stat-card blue"><span>Всего</span><b id="sTotal">0</b></div>
+          <div class="stat-card purple"><span>Процент</span><b id="sPercent">0%</b></div>
+        </div>
+        <div class="grid2">
+          <div class="panel">
+            <h2>Диаграмма</h2>
+            <div class="donut" id="donut"><span id="donutText">0%</span></div>
+          </div>
+          <div class="panel">
+            <h2>Показатели</h2>
+            <div class="metric"><span>Самая длинная серия активности</span><b id="longActive">0 дней</b></div>
+            <div class="metric"><span>Самая длинная серия неактивности</span><b id="longInactive">0 дней</b></div>
+            <div class="metric"><span>Средний онлайн</span><b id="avgTime">00:00:00</b></div>
+            <div class="metric"><span>Максимальный онлайн</span><b id="maxTime">00:00:00</b></div>
+            <div class="metric"><span>Минимальный онлайн</span><b id="minTime">00:00:00</b></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Календарь активности</h2>
+          <div id="calendarHeat" class="heat"></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-export">
+        <div class="panel">
+          <h2>Экспорт</h2>
+          <p>Можно скачать отчёт или скопировать его в буфер обмена.</p>
+          <div class="actions export-actions">
+            <button id="exportTxt">TXT</button>
+            <button id="exportCsv">CSV</button>
+            <button id="exportHtml">HTML</button>
+            <button id="copyReport" class="primary">Копировать отчёт</button>
+          </div>
+          <pre id="reportPreview" class="report"></pre>
+        </div>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="panel settings">
+          <h2>Настройки</h2>
+          <label class="field"><span>Тема интерфейса</span><select id="theme"><option value="blue">Blue Neon</option><option value="purple">Purple Neon</option><option value="matrix">Matrix Green</option></select></label>
+          <label class="field"><span>Норматив активности</span><input id="norm" type="time" step="1" value="03:00:00" /></label>
+          <label class="check"><input id="autosave" type="checkbox" checked /> Автосохранение</label>
+          <label class="check"><input id="autoload" type="checkbox" checked /> Автозагрузка последней сессии</label>
+          <label class="check"><input id="sounds" type="checkbox" checked /> Звуки интерфейса</label>
+        </div>
+      </section>
+
+      <section class="page" id="page-about">
+        <div class="panel about">
+          <div class="about-logo">ARZ</div>
+          <h2>ARZ ACTIVE DAYS</h2>
+          <p><b>Версия:</b> 1.0.0</p>
+          <p><b>Дата создания:</b> 2026 год</p>
+          <p><b>Создатель:</b> Slava_Snake</p>
+          <p><b>Технологии:</b> HTML, CSS, JavaScript</p>
+          <p><b>Назначение:</b> подсчёт активности администраторов.</p>
+          <a class="primary link-btn" href="https://vk.com/bog306" target="_blank" rel="noreferrer">Связаться с разработчиком</a>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

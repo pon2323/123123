@@ -1,0 +1,8 @@
+{
+  "name":"ARZ Active Days",
+  "short_name":"ARZ Days",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "background_color":"#090b13",
+  "theme_color":"#00A3FF"
+}
