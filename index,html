@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petelka Royal — вязаные подарки ручной работы</title>
+  <meta name="description" content="Премиальный магазин вязаных вещей ручной работы с доставкой СДЭК и Почтой России." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <div class="promo-marquee" aria-label="Акции магазина">
+    <div class="promo-track">
+      <span>Подарочная упаковка бесплатно от 1 990 ₽</span>
+      <span>Доставка по всей России</span>
+      <span>-15% на первый заказ по промокоду ROYAL15</span>
+      <span>Фото изделия перед отправкой</span>
+      <span>Подарочная упаковка бесплатно от 1 990 ₽</span>
+      <span>Доставка по всей России</span>
+      <span>-15% на первый заказ по промокоду ROYAL15</span>
+      <span>Фото изделия перед отправкой</span>
+    </div>
+  </div>
+
+  <header class="site-header" id="home">
+    <a class="logo" href="#home">PETELKA ROYAL</a>
+
+    <nav class="desktop-nav" aria-label="Главное меню">
+      <a href="#catalog">Каталог</a>
+      <a href="#promos">Акции</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#help">Помощь</a>
+    </nav>
+
+    <button class="header-cart" type="button" data-open-cart>
+      Корзина <span id="cart-count">0</span>
+    </button>
+
+    <button class="burger" type="button" aria-label="Открыть меню" data-open-menu>
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-bg hero-bg-gold"></div>
+      <div class="hero-bg hero-bg-blue"></div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">HANDMADE • ДОСТАВКА ПО ВСЕЙ РОССИИ</p>
+        <h1>Вязаные вещи ручной работы, которые хочется подарить сразу</h1>
+        <p class="hero-description">
+          Для детей, девушек, парней и женщин. Мягкие нитки, дорогой вид,
+          аккуратная упаковка и ощущение настоящего бутика.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#catalog">Смотреть каталог</a>
+          <a class="btn btn-glass" href="#promos">Подарок за 3 минуты</a>
+        </div>
+
+        <div class="hero-offer">
+          <span>-15% на первый заказ</span>
+          <span>фото перед отправкой</span>
+          <span>упаковка в подарок</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal" aria-label="Главный товар">
+        <div class="hero-badge">Новая коллекция</div>
+        <div class="product-visual premium-yarn">
+          <div class="yarn yarn-gold"><i></i><i></i><i></i></div>
+          <div class="yarn yarn-blue"><i></i><i></i><i></i></div>
+          <div class="yarn yarn-cream"><i></i><i></i><i></i></div>
+        </div>
+        <h2>Комплект “Золотая петля”</h2>
+        <p>ручная работа • мягкая пряжа • подарок</p>
+        <strong>от 1 990 ₽</strong>
+        <button class="btn btn-gold small" data-featured-add>Выбрать</button>
+      </aside>
+    </section>
+
+    <section class="value-section section-shell reveal" id="delivery">
+      <div class="value-head">
+        <h2>Почему ручная работа может продаваться дорого</h2>
+        <p>Покупатель платит не только за вещь. Он платит за тепло, ручную работу, упаковку, заботу и ощущение подарка.</p>
+      </div>
+      <div class="value-grid">
+        <article>
+          <span>01</span>
+          <h3>Авторская вещь</h3>
+          <p>Не масс-маркет, а изделие, сделанное руками под человека.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Подарочная подача</h3>
+          <p>Упаковка, карточка ухода и красивое первое впечатление.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Доставка по России</h3>
+          <p>Доступно два способа: СДЭК или Почта России.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="categories section-shell reveal">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">КАТЕГОРИИ</p>
+          <h2>Выберите, для кого подарок</h2>
+        </div>
+        <p>Каждая вещь создаётся вручную: можно выбрать цвет, размер, упаковку и настроение подарка.</p>
+      </div>
+
+      <div class="category-grid">
+        <article class="category-card accent-gold">
+          <div class="category-icon">🧸</div>
+          <h3>Детям</h3>
+          <p>Пинетки, шапочки, пледы, игрушки и мягкие подарки для малышей.</p>
+          <div><strong>от 790 ₽</strong><a href="#catalog">Смотреть →</a></div>
+        </article>
+        <article class="category-card accent-pink">
+          <div class="category-icon">🧶</div>
+          <h3>Девушкам</h3>
+          <p>Топы, сумочки, украшения, аксессуары и уютные вещи под образ.</p>
+          <div><strong>от 1 290 ₽</strong><a href="#catalog">Смотреть →</a></div>
+        </article>
+        <article class="category-card accent-blue">
+          <div class="category-icon">🧣</div>
+          <h3>Парням</h3>
+          <p>Шарфы, шапки, браслеты, минималистичные аксессуары и подарки.</p>
+          <div><strong>от 990 ₽</strong><a href="#catalog">Смотреть →</a></div>
+        </article>
+        <article class="category-card accent-purple">
+          <div class="category-icon">🪡</div>
+          <h3>Женщинам</h3>
+          <p>Кардиганы, палантины, декор, подарочные комплекты и уют для дома.</p>
+          <div><strong>от 1 990 ₽</strong><a href="#catalog">Смотреть →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="promo-section section-shell reveal" id="promos">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">ВЫГОДА</p>
+          <h2>Акции и подарки</h2>
+        </div>
+        <p>Скидка на первый заказ, бесплатная упаковка и выгодные комплекты — чтобы заказать было проще.</p>
+      </div>
+      <div class="promo-grid" id="promo-list"></div>
+    </section>
+
+    <section class="products section-shell reveal" id="catalog">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">КАТАЛОГ</p>
+          <h2>Популярные изделия</h2>
+        </div>
+        <p>Готовые идеи для подарка: можно выбрать цвет, размер и упаковку под конкретного человека.</p>
+      </div>
+
+      <div class="product-grid" id="product-list"></div>
+    </section>
+
+    <section class="order-section section-shell reveal" id="order">
+      <div class="order-card">
+        <div>
+          <p class="eyebrow">ОФОРМЛЕНИЕ</p>
+          <h2>Собрать подарок</h2>
+          <p>Оставь контакты, выбери доставку и комментарий. В этой версии заявка сохраняется в демо-заказы админки.</p>
+        </div>
+
+        <form id="order-form">
+          <label>
+            Имя
+            <input required name="name" placeholder="Например, Екатерина" />
+          </label>
+          <label>
+            Телефон или Telegram
+            <input required name="contact" placeholder="+7... или @username" />
+          </label>
+          <label>
+            Доставка
+            <select required name="delivery">
+              <option value="">Выбери доставку</option>
+              <option value="СДЭК">СДЭК</option>
+              <option value="Почта России">Почта России</option>
+            </select>
+          </label>
+          <label>
+            Промокод
+            <input name="promo" placeholder="Например, ROYAL15" />
+          </label>
+          <label class="wide">
+            Комментарий
+            <textarea name="comment" placeholder="Цвет, размер, кому подарок, пожелания к упаковке"></textarea>
+          </label>
+          <button class="btn btn-gold" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#terms" data-open-modal="terms">Условия и правила</a>
+    <a href="#privacy" data-open-modal="privacy">Политика конфиденциальности</a>
+    <a href="#help" data-open-modal="help">Помощь</a>
+    <a href="#home">Главная</a>
+    <a href="admin.html" class="admin-link">Админ-панель</a>
+  </footer>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button type="button" aria-label="Закрыть меню" data-close-menu>×</button>
+    <a href="#catalog">Каталог</a>
+    <a href="#promos">Акции</a>
+    <a href="#delivery">Доставка</a>
+    <a href="#help" data-open-modal="help">Помощь</a>
+    <a href="admin.html">Админ-панель</a>
+  </div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Корзина">
+    <div class="cart-head">
+      <h2>Корзина</h2>
+      <button type="button" data-close-cart>×</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <span>Итого</span>
+      <strong id="cart-total">0 ₽</strong>
+    </div>
+    <a class="btn btn-gold full" href="#order" data-close-cart>Оформить</a>
+  </aside>
+
+  <div class="modal" id="content-modal">
+    <div class="modal-card">
+      <button type="button" class="modal-close" data-close-modal>×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
