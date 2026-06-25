@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель — Petelka Royal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">DEMO ADMIN</p>
+        <h1>Админ-панель магазина</h1>
+        <p>Редактирование товаров, акций, промокодов и просмотр заявок. Данные хранятся в браузере через localStorage.</p>
+      </div>
+      <a class="btn btn-glass" href="index.html">← На сайт</a>
+    </header>
+
+    <section class="admin-login" id="admin-login">
+      <h2>Вход</h2>
+      <p>Демо-пароль: <strong>admin2026</strong></p>
+      <input id="admin-password" type="password" placeholder="Введите пароль" />
+      <button class="btn btn-gold" id="login-btn">Войти</button>
+    </section>
+
+    <main class="admin-panel hidden" id="admin-panel">
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>Товары</h2>
+          <button class="btn btn-gold small" id="add-product">Добавить товар</button>
+        </div>
+        <div id="admin-products"></div>
+      </section>
+
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>Акции</h2>
+          <button class="btn btn-gold small" id="add-promo">Добавить акцию</button>
+        </div>
+        <div id="admin-promos"></div>
+      </section>
+
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>Промокоды</h2>
+          <button class="btn btn-gold small" id="add-coupon">Добавить промокод</button>
+        </div>
+        <div id="admin-coupons"></div>
+      </section>
+
+      <section class="admin-block">
+        <div class="admin-block-head">
+          <h2>Заказы / заявки</h2>
+          <button class="btn btn-glass small" id="clear-orders">Очистить заявки</button>
+        </div>
+        <div id="admin-orders"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
